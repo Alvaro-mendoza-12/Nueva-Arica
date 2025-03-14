@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina web</title>
+    <link rel="stylesheet" href="PAGGINA.css">   
+
+<body>
+    <header class="header">
+        <input type="checkbox" class="header__checkbox" id="open-menu">
+        <label for="open-menu" class="header__open-nav-buttom" role="button">=</label>
+        <div class="header__logo-container ">
+            <img class="header__logo" src="NUEVA-ARICA-logo.png" alt="">
+        </div>
+
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#profile">Inicio</a></li>
+                <li class="header__nav-item"><a href="#portfolio">Acerca de Nosotros</a></li>
+                <li class="header__nav-item"><a href="#contac">I.E</a></li>
+                <li class="header__nav-item"><a href="#">Eventos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="profile" id="profile">
+        <div class="profile__wrapper">
+            <div class="profile__img-container">
+                <img src="Nueva-Arica-Arco.jpg" alt="" class="profile__img">
+            </div>
+            <div class="profile__data-container">
+                <div class="profile__data">
+                    <div class="profile__description">
+                        <h1>Nueva Arica </h1>
+                        <p>El distrito de Nueva Arica se encuentra en la provincia de Chiclayo, departamento de
+                            Lambayeque, en el norte del Perú.
+                            Fue creado mediante la Ley N.º 9928 el 25 de enero de 1944, durante el gobierno del
+                            Presidente Manuel Prado Ugarteche. Su extensión es de 245.12 km², y su capital es el pueblo
+                            de Nueva Arica, situado a 178 metros sobre el nivel del mar.</p>
+                    </div>
+                    <div class="profile__skills-container">
+                        <h2>Sustento económico y principales actividades de la localidad
+                        </h2>
+                        <p>Si bien este distrito es muy reconocido dentro de la región por su producción de calidad en
+                            el cultivo de yuca, se encuentran algunas otras actividades que son el sustento económico
+                            del distrito, aquí encontramos la ganadería, con un 20%; agricultura, con un 30%;
+                            pesquería, conformado por un 04%; comercio, con un 20%; Gastronomía local y turismo con un
+                            10%; trabajos artesanales, con un 03%; apicultura con un 03% e industria, manufactura y
+                            talleres varios con un 10%, conformando estos indicadores el ingreso de la localidad.</p>
+                        <ul>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__baar bar--20">20%</div>
+                                </div>
+                                <span class="profile__skill-name"> Ganaderia</span>
+                            </li> 
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__baar bar--30">30%</div>
+                                </div>
+                                <span class="profile__skill-name"> Agricultura</span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__baar bar--4">4%</div>
+                                </div>
+                                <span class="profile__skill-name">Pesqueria</span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__baar bar--20">20%</div>
+                                </div>
+                                <span class="profile__skill-name">Comercio</span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__baar bar--10">10%</div>
+                                </div>
+                                <span class="profile__skill-name">Gastronomía local y turismo </span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__baar bar--3">3%</div>
+                                </div>
+                                <span class="profile__skill-name">Trabajos artesanales</span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__baar bar--3">3%</div>
+                                </div>
+                                <span class="profile__skill-name">Apicultura </span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__baar bar--10">10%</div>
+                                </div>
+                                <span class="profile__skill-name">Manufactura y talleres </span>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="portfolio" id="portfolio">
+        <h2 class="portfolio__title">HACERCA DE NUEVA ARICA</h2>
+        <div class="portfolio__project-container">
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">Foto de la muni</h2>
+            </div>
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">foto del parque</h2>
+            </div>
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">foto del paque infantil</h2>
+            </div>
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">foto de la capilla</h2>
+            </div>
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">foto del mercado</h2>
+            </div>
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">foto de todo Nueva Arica</h2>
+            </div>
+        </div>
+    </section>
+    <section class="form" id="contac">
+        <h2 class="form__title">Contacto</h2>
+        <form action="" class="form__form">
+            <div class="form__input-container">
+                <label for="nombre">Nombre
+                    <input type="text" placeholder="John " id="nombre">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label for="Apellido">Apellido
+                    <input type="text" placeholder="Doe" id="Apellido">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label for="email">E-mail
+                    <input type="email" placeholder="mail@gmail.com" id="email">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label for="mensaje">Mensaje
+                    <textarea name="" id="mensaje" placeholder="Your message"></textarea>
+                </label>
+            </div>
+            <div class="form__input-container">
+                <input type="submit">
+            </div>
+        </form>
+    </section>
+    <footer>
+        NUEVA ARICA - Copyright© 2025
+    </footer>
+</body>
+
+</html>
