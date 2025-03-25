@@ -16,10 +16,10 @@ body, div, ul, nav, header, footer, a, li, label {
 
 dialog{
     background-color: #0009;
-    height: 100vh;
+    height: 100dvh;
     box-sizing: border-box;
     z-index: 1000;
-    width: 100vw;
+    width: 100%;
 }
 
 .modal__content{
@@ -30,8 +30,6 @@ dialog{
     margin-top: 50px;
     position: relative;
 }
-
-/* ---------INICIO DE VENTANA MODAL--------  */
 
 .modal__title{
     margin-top: 10px;
@@ -45,10 +43,6 @@ dialog{
     right: 20px;
     padding: 4px 12px;
 }
-
-/* ---------- FIN DE VENTANA MODAL---------- */
-
-
 
 /* -----------HEADER SECTION O SECION  DEL HEADER */
 
@@ -85,8 +79,8 @@ dialog{
     display: none;
     background-color: #fff;
     position: absolute;
-    height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
     top: 0;
     z-index: -1;
 }
@@ -341,6 +335,23 @@ h1{
     animation: aparecer both;
     animation-timeline: view();
     animation-range: cover 5% cover 40%;
+}
+
+.muni{
+    background-image: url(muni.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.parque{
+    background-image: url(parque.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.capilla{
+    background-image: url(capilla.jpeg);
+    background-position: center;
+    background-size: cover;
 }
 
 .portfolio__project:hover{
