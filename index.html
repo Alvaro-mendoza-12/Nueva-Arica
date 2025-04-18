@@ -7,6 +7,8 @@
     <title>pagina web</title>
     <link rel="stylesheet" href="PAGGINA.css">
     <link rel="shortcut icon" href="muni.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
 
 <body>
     <dialog open="">
@@ -20,22 +22,28 @@
         </form>
     </dialog>
 
+    <!-- incio del nav o barra de navegacion -->
+
     <header class="header">
         <input type="checkbox" class="header__checkbox" id="open-menu">
         <label for="open-menu" class="header__open-nav-buttom" role="button">=</label>
         <div class="header__logo-container ">
-            <img class="header__logo" src="NUEVA-ARICA-logo.png" alt="">
+            <a href="index.html"><img class="header__logo" src="NUEVA-ARICA-logo.png" alt=""></a>
         </div>
 
         <nav class="header__nav">
             <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#profile">Inicio</a></li>
-                <li class="header__nav-item"><a href="#portfolio">Acerca de Nosotros</a></li>
-                <li class="header__nav-item"><a href="#contac">I.E</a></li>
-                <li class="header__nav-item"><a href="#">Eventos</a></li>
+                <li class="header__nav-item"><a href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><a href="nosotros.html">Acerca de Nosotros</a></li>
+                <li class="header__nav-item"><a href="I.E.html">I.E</a></li>
+                <li class="header__nav-item"><a href="Eventos.html">Eventos</a></li>
             </ul>
         </nav>
     </header>
+
+
+    <!--  INICIO DEL CONTENIDO DE LA PAGINA -->
+
     <main class="profile" id="profile">
         <div class="profile__wrapper">
             <div class="profile__img-container">
@@ -109,14 +117,15 @@
                                 </div>
                                 <span class="profile__skill-name">Manufactura y talleres </span>
                             </li>
-                        </ul> 
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
     <section class="portfolio" id="portfolio">
-        <h2 class="portfolio__title">HACERCA DE NUEVA ARICA</h2>
+        <h2 class="portfolio__title">LUGARES DE NUEVA ARICA</h2>
         <div class="portfolio__project-container">
             <div class="portfolio__project muni">
                 <h2 class="portfolio__project-name">Municipalidad del distrito.</h2>
@@ -138,34 +147,118 @@
             </div>
         </div>
     </section>
-    <section class="form" id="contac">
-        <h2 class="form__title">Contacto</h2>
-        <form action="" class="form__form">
-            <div class="form__input-container">
-                <label for="nombre">Nombre
-                    <input type="text" placeholder="John " id="nombre">
-                </label>
+
+
+    <section class="informacion">
+        <main>
+            <h2 class="informacion__h2_1  informacion__titulo">Conoce más sobre Nueva Arica</h2>
+            <div class="informacion__main">
+
+                <div class="informacion__centros">
+                    <h2 class="informacion__h2_2">Centros poblados:</h2>
+                    <ul>
+                        <li><strong>Urbanos:</strong> Nueva Arica</li>
+                        <li><strong>Rurales:</strong> La Viña, Culpon</li>
+                        <li><strong>Caseríos:</strong> Dos Corrales, Saldaña Baja</li>
+                    </ul>
+                </div>
+
+
+                <div class="informacion__relieve">
+                    <h2 class="informacion__h2_3">RELIEVE Y FLORA</h2>
+                    <p class="relieve">El relieve del distrito es mayormente llano, aunque presenta ligeras elevaciones
+                        debido a su
+                        proximidad a los contrafuertes andinos. Entre las especies de flora presentes destacan:</p>
+                    <ul>
+                        <li>Faiques</li>
+                        <li>Algarrobo</li>
+                        <li>Concuno</li>
+                        <li>Overo</li>
+                        <li>Zapote</li>
+                        <li>Caña brava</li>
+                        <li>Sauce</li>
+                        <li>Entre diversas plantas más.</li>
+                    </ul>
+                </div>
+
+                <div class="informacion__fauna">
+                    <h2 class="informacion__h2_4">FAUNA</h2>
+                    <p class="fauna">Entre las especies animales que habitan en el distrito se encuentran:</p>
+                    <ul>
+                        <li>Zorro</li>
+                        <li>Paloma</li>
+                        <li>Gallinazo</li>
+                        <li>Sapo</li>
+                        <li>Chisco</li>
+                        <li>Chilala</li>
+                        <li>Venado</li>
+                        <li>Huarequeque</li>
+                        <li>Tordo</li>
+                        <li>Serpientes</li>
+                        <li>Insectos</li>
+                    </ul>
+                </div>
+
+                <div class="informacion__recursos">
+                    <div>
+                        <h2 class="informacion__h2_5">RECURSOS NATURALES</h2>
+                        <p class="recursos">
+                            Los suelos del distrito son fértiles y adecuaos para cultivos como maíz, yuca, y arroz
+                            regados
+                            por
+                            el rio Zaña. Además, cuenta con depósitos de arena, piedra y ripio que se utilizan en
+                            actividades de
+                            construcción.
+                        </p>
+                    </div>
+
+                    <div class="informacion__turismo">
+                        <h2 class="informacion__h2_6">TURISMO</h2>
+                        <p class="turismo">Entre los lugares turísticos más destacados del distrito están:</p>
+                        <ul>
+                            <li>Reservorio de Sorronto.</li>
+                            <li>Cerro campana, conocido por sus leyendas.</li>
+                            <li>La Copuerta.</li>
+                            <li>Caserios productores de caña de azúcar</li>
+                        </ul>
+                    </div>
+
+                    <div class="informacion__fiestas">
+                        <h2 class="informacion__h2_7">FIESTAS Y EVENTOS</h2>
+                        <ul>
+                            <li><strong>Las principales celebraciones del distrito son:</strong></li>
+                            <li>25 de enero: Aniversario del distrito.</li>
+                            <li>Mayo: Festividad en honor a la Santísima Cruz.</li>
+                            <li>Noviembre: Fiesta en honor a San Martín de Porres.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="form__input-container">
-                <label for="Apellido">Apellido
-                    <input type="text" placeholder="Doe" id="Apellido">
-                </label>
-            </div>
-            <div class="form__input-container">
-                <label for="email">E-mail
-                    <input type="email" placeholder="mail@gmail.com" id="email">
-                </label>
-            </div>
-            <div class="form__input-container">
-                <label for="mensaje">Mensaje
-                    <textarea name="" id="mensaje" placeholder="Your message"></textarea>
-                </label>
-            </div>
-            <div class="form__input-container">
-                <input type="submit">
-            </div>
-        </form>
+        </main>
     </section>
+
+    <div class="a">
+        <h2 class="ABC">¿Deseas contribuir a la construcción de la web?</h2>
+        <p class="b">
+            ¡Hola! Si deseas colaborar con nosotros, puedes enviarnos imágenes de los lugares que aún nos
+            faltan: el parque infantil, el mercado, la capilla y otros espacios representativos de Nueva
+            Arica.
+            <br><br>
+            También buscamos fotos de las distintas instituciones educativas del distrito, tanto del nivel
+            inicial (de los dos jardines), como de primaria (I.E. 1038 y 1039) y secundaria (I.E. Eleodoro
+            Vera Palacios). Además, agradeceríamos imágenes e informacion de festividades y eventos que se
+            celebran a lo largo del año para la seccion de Eventos.
+            <br><br>
+            Si deseas aportar imágenes, información o sugerencias para agregar o mejorar alguna sección del
+            sitio web, no dudes en comunicarte con nosotros a través de nuestro WhatsApp:
+            <a href="https://wa.me/918440948" target="_blank"  class="c">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </p>
+    </div>
+
+
+    <!--   footer -->
     <footer>
         NUEVA ARICA - Copyright© 2025
     </footer>
