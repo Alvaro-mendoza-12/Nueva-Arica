@@ -1,12 +1,18 @@
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
+    scrollbar-width: none;
 }
 
 body{
     font-family: monospace;
     background-color: #e2eaff;
-    color: #101632dd
+    color: #101632dd;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    scrollbar-width: none;
 }
 
 body, div, ul, nav, header, footer, a, li, label {
@@ -300,7 +306,7 @@ h1{
 .portfolio{
     background-color: #18233f;
     color: #fff;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -314,24 +320,31 @@ h1{
     margin-bottom: 0;
 }
 
-.portfolio__project-container{
+.portfolio__project-container { 
     display: grid;
     grid-template-columns: 2fr;
-    max-width: 1300px;
+    grid-auto-rows: 250px;
+    width: 100%;             
+    max-width: 400px;         
+    padding: 5px;
     margin: auto;
-    width: 100%;
-    gap: 12px;
-    padding: 12px;
-    min-height: 80vh;
+    gap: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; 
 }
 
+
+
 .portfolio__project{
-    background-image:linear-gradient(#0009,#0009), url(Nueva-Arica-Arco.jpg);
+    background-image: url(Nueva-Arica-Arco.jpg);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     background-position: center;
     background-size: cover;
     display: grid;
     align-items: end;
-    border-radius: 8px;
+    border-radius: 10px;
     animation: aparecer both;
     animation-timeline: view();
     animation-range: cover 5% cover 40%;
@@ -357,11 +370,27 @@ h1{
 .portfolio__project:hover{
     opacity:0.74;
     outline:2px solid #fff6;
+   
 }
 
 /* --------------PORTFOLIO QUERIES----------*/
 
-@container portfolio (min-width: 56.25rem){
+
+@media screen and (min-width: 550px) {
+    .portfolio__project-container {
+        display: grid;
+        grid-template-columns: 2fr;
+        max-width: 1300px;
+        margin: auto;
+        width: 100%;
+        gap: 12px;
+        padding: 12px;
+        min-height: 80vh;
+    }
+}
+
+
+@container portfolio (min-width: 50rem){
     .portfolio__project-container{
         grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
     }
@@ -395,123 +424,6 @@ h1{
 /*----------- PORTFOLIO ENDS ---------*/
 
 
-/* --------------CONTACT SECTION ------------*/
-
-.form{
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    padding: 30px 0;
-    container-name: form;
-    container-type: inline-size;
-    animation: aparecer both;
-    animation-timeline: view();
-    animation-range: cover 10% contain 40%;
-}
-
-.form__form{
-    padding: 12px;
-    max-width: 600px;
-    width: 100%;
-    display: grid;
-    margin-bottom: 30px;
-}
-
-.form__input-container :is(input,textarea) {
-    width: 100%;
-    padding: 9px;
-    font-size: 16px;
-    margin: 4px;
-    border: none;
-    box-shadow: 2px 2px 4px #0003;
-    /* background-color: #ffd; */
-}
-
-.form__input-container textarea{
-    resize: none;
-    min-height: 120px;
-    font-family: inherit;
-}
-
-.form__input-container input[type="submit"]{
-    padding: 12px;
-    background-color: #6d6;
-    color: #fff;
-    font-size: 25px;
-    font-family: monospace;
-    font-weight: 900;
-}
-
-.form__title{
-    font-size: 3rem;
-}
-
-
-/* -----------CONTACT QUERIES ------------- */
-
-
-@container form (min-width: 56.25rem){
-
-    .form__form{
-        grid-template-columns: 1fr 1fr ;
-        grid-template-areas: 
-        "name lastname"
-        "email email"
-        "message message"
-        "buttom buttom";
-        gap: 12px;
-        background-image: radial-gradient(#18233f11, #18233f44 );
-        padding: 30px;
-        box-shadow: 0 0 40px #0006;
-        border-radius: 12px;
-    }
-
-    .form__input-container:first-child{
-        grid-area: name;
-    }
-
-    .form__input-container:nth-child(2){
-        grid-area: lastname;
-    }
-
-    .form__input-container:nth-child(3){
-        grid-area: email;
-    }
-
-    .form__input-container:nth-child(4){
-        grid-area: message;
-    }
-    
-
-    .form__input-container:nth-child(5){
-        grid-area: buttom;
-    }
-
-    .form__input-container :is(input,textarea) {
-        box-shadow: 0;
-        border-radius: 4px;
-    }
-}
-
-
-
-
-/* -------CONTACT ENDS---------- */
-
-
-/* ---------FOOTER SECTION----------- */
-
-footer{
-    padding: 60px;
-    text-align: center;
-    background-color: #595;
-    color: #fff;
-    font-size: 22px;
-}
-
 
 /* ----ANIMACIONES------ */
 
@@ -537,3 +449,179 @@ footer{
     }
 }
 
+
+/* ESTILOS DE CONOSE MAS SOBRE NUEVA ARICA */
+
+
+  
+  /* --- INFORMACIÓN GENERAL --- */
+  .informacion {
+    padding: 0px;
+    padding-bottom: 30px;
+    background-color: #4ae;
+    animation: aparecer both;
+    animation-timeline: view();
+    animation-range: cover 5% cover 40%;
+    font-size: 20px;
+  }
+  
+  .informacion__main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .informacion__titulo{
+    font-size: 3rem;
+    text-align: center;
+    color: #00f;
+    text-transform: uppercase;
+  }
+  
+  .informacion__h2_2,
+  .informacion__h2_3,
+  .informacion__h2_4,
+  .informacion__h2_5,
+  .informacion__h2_6,
+  .informacion__h2_7 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1e88e5;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .informacion__centros,
+  .informacion__relieve,
+  .informacion__fauna,
+  .informacion__recursos,
+  .informacion__turismo,
+  .informacion__fiestas {
+    background: #e3f2fd;
+    padding: 15px;
+    /* border-radius: 10px; */
+    border: 2px solid #000;
+  }
+  
+  .informacion__centros:hover{
+    box-shadow: 0 0px 16px #000;
+  }
+  .informacion__relieve:hover{
+    box-shadow: 0 0px 16px #000;
+  }
+  .informacion__fauna:hover{
+    box-shadow: 0 0px 16px #000;
+  }
+  .informacion__recursos:hover{
+    box-shadow: 0 0px 16px #000;
+  }
+  .informacion__turismo:hover{
+    box-shadow: 0 0px 16px #000;
+  }
+  .informacion__fiestas:hover{
+    box-shadow: 0 0px 16px #000;
+  }
+  
+  .informacion__turismo,
+  .informacion__fiestas{
+    margin: 30px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+
+/* --- TABLET / 2 columnas desde 500px --- */
+@media (min-width: 550px) {
+    .informacion__main {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      animation: aparecer both;
+      animation-timeline: view();
+      animation-range: cover 5% cover 40%;
+    }
+  
+    .informacion__centros,
+    .informacion__relieve,
+    .informacion__fauna,
+    .informacion__recursos,
+    .informacion__turismo,
+    .informacion__fiestas {
+      width: 48%;
+      border-radius: 10px;
+      animation: aparecer both;
+      animation-timeline: view();
+      animation-range: cover 5% cover 40%;
+    }
+    
+    .informacion__turismo,
+    .informacion__fiestas{
+      width: 200px;
+    }
+  }
+
+  
+  /* --- LAPTOP / DESKTOP --- */
+  @media (min-width: 1000px) {
+    .informacion {
+      padding: 40px;
+      animation: aparecer both;
+      animation-timeline: view();
+      animation-range: cover 5% cover 40%;
+    }
+  
+    .informacion__main {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .informacion__centros,
+    .informacion__relieve,
+    .informacion__fauna,
+    .informacion__recursos,
+    .informacion__turismo,
+    .informacion__fiestas {
+      width: 48%;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+  
+  }
+/* ---------FOOTER SECTION----------- */
+
+footer{
+    padding: 60px;
+    text-align: center;
+    background-color: #595;
+    color: #fff;
+    font-size: 22px;
+}
+
+
+
+
+.a{
+    margin: 0;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.ABC{
+    text-align: center;
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+.c{
+    font-size: 2rem;
+    background-color: #4e4;
+    padding: 0 5px 0 5px;
+}
